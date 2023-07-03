@@ -33,14 +33,14 @@ const Section1 = ({
 
   useEffect(() => {
     axios
-      .get("http://localhost:5080/api/phones")
+      .get("/api/phones")
       .then((res) => setData(res.data))
       .catch((err) => console.error(err));
   }, []);
 
   useEffect(() => {
     axios
-      .get("http://localhost:5080/api/config")
+      .get("/api/config")
       .then((res) => setMinConfig(res.data))
       .catch((err) => console.error(err));
   }, []);

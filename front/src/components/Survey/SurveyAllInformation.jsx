@@ -41,7 +41,7 @@ const SurveyAllInformation = ({
       "rank": phoneRating
     }
 
-    axios.post("http:///api/history", newPhone)
+    axios.post("/api/history", newPhone)
       .then((res) => {
         if (res.status === 201) {
           setSeeAllInformation(false)

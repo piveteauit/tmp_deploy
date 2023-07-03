@@ -27,7 +27,7 @@ const Login = ({setToken}) => {
     e.preventDefault();
 
     axios
-        .post("http://localhost:5080/api/users/login", form)
+        .post("/api/users/login", form)
         .then((res) => setToken(res.data))
         .catch((error) => setErrors(error));
     

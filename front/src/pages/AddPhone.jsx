@@ -22,7 +22,7 @@ const AddPhone = () => {
     });
 
     useEffect(() => {
-        axios.get('http:///api/phones')
+        axios.get('/api/phones')
             .then((res) => setData(res.data))
             .catch((err) => console.error(err));
     }, []);
@@ -97,7 +97,7 @@ const AddPhone = () => {
     const sendingForm = (e) => {
         e.preventDefault();
 
-        axios.post('http:///api/phones', newPhone)
+        axios.post('/api/phones', newPhone)
             .then((res) => console.log(res))
             .catch((err) => console.log(err));
         console.log(newPhone);
@@ -115,7 +115,7 @@ const AddPhone = () => {
                         <h1>Ajouter un smartphone</h1>
                         <p className='subtitle'>Veuillez renseigner les champs ci-dessous</p>
                     </div>
-                    <form method="post" action="http:///api/phones" onSubmit={sendingForm}>
+                    <form method="post" action="/api/phones" onSubmit={sendingForm}>
                         <div className="field">
                             <label htmlFor="brand">Marque</label>
                             <input type="text" name="brand" id="brand" required placeholder='Marque' value={newPhone.brand} onChange={inputChange} />

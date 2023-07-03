@@ -35,7 +35,7 @@ const MinConfig = () => {
     }
 
     useEffect(() => {
-        axios.get('http:///api/config')
+        axios.get('/api/config')
             .then(res => {
                 setData(res.data[0])
             })

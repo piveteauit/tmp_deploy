@@ -20,7 +20,7 @@ const PhoneList = () => {
 
   useEffect(() => {
     axios
-      .get(`http://localhost:5080/api/phones`)
+      .get(`/api/phones`)
       .then((res) => res.data)
       .then((data) => setPhones(data))
       .catch((error) => {
